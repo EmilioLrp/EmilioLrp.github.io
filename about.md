@@ -15,10 +15,10 @@ I am Ruipeng Liu, a 4th year PhD student at Syracuse University. Currently under
 
 ### Publications
 * **R. Liu**, B. He, N. Tahir, and G. E. Katz, “On the feasibility of single-pass full-capacity learning in linear threshold neurons with binary input vectors,” in International Conference on Machine
-Learning. PMLR, 2024, pp. 31 119–31 130. [Link](https://openreview.net/forum?id=l7vQQi0I2d)
+Learning. PMLR, 2024, pp. 31 119–31 130. [Link](https://proceedings.mlr.press/v235/liu24x.html)
 
 * **R. Liu**, Q. Qiu, and S. Khan, G. E. Katz “Linearithmic clean-up for vector-symbolic key-value memory with kroneker rotation products,” in 19th International Conference on Neurosymbolic Learning and
-Reasoning, 2025. [Link](https://openreview.net/forum?id=MxZZKQfjg5)
+Reasoning, 2025. [Link](https://arxiv.org/abs/2506.15793)
 
 
 ### Education
