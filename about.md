@@ -9,6 +9,8 @@ permalink: /about/
 
 I am Ruipeng Liu, a 4th year PhD student at Syracuse University. Currently under the supervision of [Dr. Garrett E. Katz](https://web.ecs.syr.edu/~gkatz01/?_gl=1*911aih*_gcl_au*OTk5NDQ3ODgwLjE3NTUxODk5NDE.*_ga*MTAzMzQ2ODU1My4xNzU1MTg5OTQx*_ga_QT13NN6N9S*czE3NTYyNDQzNTIkbzQkZzEkdDE3NTYyNDQ2MzUkajU5JGwwJGgw). Before that I obtained my Master degree in the same University on 2022. Before that I obtained my Bachelor Degree at Hong Kong Baptist University in 2018. During my staying in HKBU, I spend 1 semester exchanging in Dalhousie University in the Fall of 2016.
 
+<a href="/files/Ruipeng_Liu_CV.pdf">Resume</a>
+
 ## Research Interests
 * Reinforcement learning
 * Neurosymbolic AI
