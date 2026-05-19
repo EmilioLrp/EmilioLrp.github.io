@@ -1,0 +1,15 @@
+@InProceedings{pmlr-v284-liu25b,
+  title = 	 {Linearithmic Clean-up for Vector-Symbolic Key-Value Memory with Kroneker Rotation Products},
+  author =       {Liu, Ruipeng and Qiu, Qinru and Khan, Simon and Katz, Garrett Ethan},
+  booktitle = 	 {Proceedings of The 19th International Conference on Neurosymbolic Learning and Reasoning},
+  pages = 	 {1107--1118},
+  year = 	 {2025},
+  editor = 	 {H. Gilpin, Leilani and Giunchiglia, Eleonora and Hitzler, Pascal and van Krieken, Emile},
+  volume = 	 {284},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {08--10 Sep},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v284/main/assets/liu25b/liu25b.pdf},
+  url = 	 {https://proceedings.mlr.press/v284/liu25b.html},
+  abstract = 	 {A computational bottleneck in current Vector-Symbolic Architectures (VSAs) is the "clean-up" step, which decodes the noisy vectors retrieved from the architecture.  Clean-up typically compares noisy vectors against a "codebook" of prototype vectors, incurring computational complexity that is quadratic or similar.  We present a new codebook representation that supports efficient clean-up, based on Kroneker products of rotation-like matrices.  The resulting clean-up time complexity is linearithmic, i.e. $\mathcal{O}(N\text{log}N)$, where $N$ is the vector dimension and also the number of vectors in the codebook.  Clean-up space complexity  is $\mathcal{O}(N)$.  Furthermore, the codebook is not stored explicitly in computer memory: It can be represented in $\mathcal{O}(\text{log}N)$ space, and individual vectors in the codebook can be materialized in $\mathcal{O}(N)$ time.  At the same time, asymptotic memory capacity remains comparable to standard approaches. Computer experiments confirm these results, demonstrating several orders of magnitude more scalability than baseline VSA techniques.}
+}
