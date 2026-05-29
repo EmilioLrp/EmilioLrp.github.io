@@ -11,7 +11,8 @@ I am Ruipeng Liu, a 4th-year Ph.D. student at Syracuse University, advised by [D
 
 Before returning to academia in 2020, I worked as a Big Data Assistant Engineer in Shenzhen, China for two years, focusing on backend developing using Java and Python. In addition to research, I have also served as a teaching assistant for undergraduate computer science courses, including Introduction to Analysis of Algorithms.
 
-- [Download my CV](/files/Work_CV_Ruipeng_Liu.pdf)
+Check out my resume here:
+- [Resume](/files/resume/Work_CV_Ruipeng_Liu.pdf)
 
 
 ---

@@ -18,8 +18,9 @@ layout: default
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    {% assign page_description = page.short_description | default: page.excerpt %}
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page_description %}<meta itemprop="description" content="{{ page_description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
     {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
 
@@ -30,18 +31,36 @@ layout: default
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
+        {% assign talk_kind = page.talk_type | default: page.type %}
+        {% if talk_kind %}<p class="page__meta"><strong>Type:</strong> {{ talk_kind }}</p>{% endif %}
         {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Time:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
         {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Time:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
+        {% if page.venue %}<p class="page__meta"><strong>Venue:</strong> {{ page.venue }}</p>{% endif %}
+        {% if page.location %}<p class="page__meta"><strong>Location:</strong> {{ page.location }}</p>{% endif %}
 
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.abstract %}
+          <h2>Abstract</h2>
+          {{ page.abstract | markdownify }}
+        {% endif %}
+
         {{ content }}
+
+        {% if page.slidesurl or page.posterurl or page.videourl %}
+          <h2>Materials</h2>
+          <p>
+            {% if page.slidesurl %}<a href="{{ page.slidesurl }}" class="btn">Slides</a>{% endif %}
+            {% if page.posterurl %}<a href="{{ page.posterurl }}" class="btn">Poster</a>{% endif %}
+            {% if page.videourl %}<a href="{{ page.videourl }}" class="btn">Video</a>{% endif %}
+          </p>
+        {% endif %}
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
